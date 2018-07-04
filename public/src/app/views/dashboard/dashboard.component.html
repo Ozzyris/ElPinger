@@ -1,0 +1,108 @@
+<section class="dashboard_title">
+	<div class="inner_container">
+		<img src="../../assets/images/LOGO_pingmaster.svg" alt="Ping Master Logo">
+	</div>
+</section>
+
+<section class="ping_container">
+	<div class="innter_container">
+		<ul class="website_container">
+			<li class="website_master">
+				<div class="header">
+					<div class="title">
+						<h3>Carrott Backend</h3>
+					</div>
+					<div class="performance">
+						<div class="performance_group">
+							<p class="perf_label">Response Time</p>
+							<p class="perf_value">234 ms</p>
+						</div>
+						<div class="uptime_group">
+							<p class="uptime_label">Uptime (Last 24h)</p>
+							<p class="uptime_value">67.9%</p>
+						</div>
+						<div class="status_group">
+							<span class="circle" [ngClass]="{green : (admin_login.status == 'ON'), orange : (admin_login.status == 'WAITING'), red : (admin_login.status == 'OFF')}"></span>
+						</div>
+					</div>
+				</div>
+				<div class="body">
+					<ul>
+						<li>
+							<div class="content">
+								<div class="title">
+									<h3>Admin Login</h3>
+								</div>
+								<div class="performance">
+									<div class="last_update">
+										<p class="update_label">Last Update</p>
+										<p class="update_value">{{admin_login.date | amTimeAgo}}</p>
+									</div>
+									<div class="performance_group">
+										<p class="perf_label">Response Time</p>
+										<p class="perf_value">{{admin_login.responseTime}}</p>
+									</div>
+									<div class="uptime_group">
+										<p class="uptime_label">Uptime (Last 24h)</p>
+										<p class="uptime_value">{{admin_login.upTime}}</p>
+									</div>
+									<div class="status_group">
+										<span class="circle" [ngClass]="{green : (admin_login.status == 'ON'), orange : (admin_login.status == 'WAITING'), red : (admin_login.status == 'OFF')}"></span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="title">
+									<h3>Admin Dashboard</h3>
+								</div>
+								<div class="performance">
+									<div class="last_update">
+										<p class="update_label">Last Update</p>
+										<p class="update_value">10/09/2017 16:06:37</p>
+									</div>
+									<div class="performance_group">
+										<p class="perf_label">Response Time</p>
+										<p class="perf_value">234 ms</p>
+									</div>
+									<div class="uptime_group">
+										<p class="uptime_label">Uptime (Last 24h)</p>
+										<p class="uptime_value">67.9%</p>
+									</div>
+									<div class="status_group">
+										<span class="circle" [ngClass]="{green : (admin_login.status == 'ON'), orange : (admin_login.status == 'WAITING'), red : (admin_login.status == 'OFF')}"></span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="title">
+									<h3>Admin Client</h3>
+								</div>
+								<div class="performance">
+									<div class="last_update">
+										<p class="update_label">Last Update</p>
+										<p class="update_value">10/09/2017 16:06:37</p>
+									</div>
+									<div class="performance_group">
+										<p class="perf_label">Response Time</p>
+										<p class="perf_value">234 ms</p>
+									</div>
+									<div class="uptime_group">
+										<p class="uptime_label">Uptime (Last 24h)</p>
+										<p class="uptime_value">67.9%</p>
+									</div>
+									<div class="status_group">
+										<span class="circle" [ngClass]="{green : (admin_login.status == 'ON'), orange : (admin_login.status == 'WAITING'), red : (admin_login.status == 'OFF')}"></span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>

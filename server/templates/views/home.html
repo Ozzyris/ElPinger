@@ -1,0 +1,19 @@
+<!doctype html>  
+<html lang="en">  
+    <head></head>
+    <body>
+        <h1 id="title">The aggregation just started, please take a sit and relax.</h1>
+        <p>alex with socket</p>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>  
+			var socket = io.connect('http://192.168.1.145:1607');
+			socket.on('connect', function(data) {
+				socket.emit('join');
+			});
+			socket.on('login_api', function(data) {
+                document.getElementById("title").innerHTML = data;
+        	});
+		</script>
+    </body>
+</html>

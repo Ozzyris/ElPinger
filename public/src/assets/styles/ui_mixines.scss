@@ -1,0 +1,80 @@
+// =============================================================================
+// VARIABLE
+// =============================================================================
+	$black: #000000;
+	$white: #ffffff;
+
+	$dark_blue: darken(#47CCD6, 15%);
+	$med_blue: #47CCD6;
+	$light_blue: lighten(#47CCD6, 15%);
+
+	$dark_green: darken(#35b439, 15%);
+	$med_green: #35b439;
+	$light_green: lighten(#35b439, 15%);
+
+	$dark_red: darken(#ED174C, 15%);
+	$med_red: #ED174C;
+	$light_red: lighten(#ED174C, 15%);
+
+	$orange: #FF863B;
+
+	$dark_grey: #2c3139;
+	$med_grey: #3f454f;
+	$light_grey: lighten(#3f454f, 15%);
+
+	$intro_footer_light_grey: #ecedee;
+
+
+
+// =============================================================================
+// String Replace
+// =============================================================================
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+// =============================================================================
+// CONTAINTER SIZING
+// =============================================================================
+@mixin container_sizing( $max_size ){
+	width: 90%;
+	max-width: $max_size;
+	margin: 0 auto;
+}

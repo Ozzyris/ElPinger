@@ -1,0 +1,23 @@
+{
+  "name": "ping_master",
+  "version": "1.0.0",
+  "description": "Let you ping complex request to your server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "ping",
+    "server"
+  ],
+  "author": "Experience Digital",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.3.0",
+    "express": "^4.15.4",
+    "nodemailer": "^4.1.0",
+    "request": "^2.82.0",
+    "socket.io": "^2.0.3"
+  }
+}

@@ -1,0 +1,191 @@
+@import '../../../assets/styles/ui_mixines';
+
+section.dashboard_title{
+	background-image: linear-gradient( 135deg, rgba(#FCCF31, .8) 10%, rgba(#F55555, .8) 100%);
+	padding: 20px 0;
+	div.inner_container{
+		@include container_sizing( 500px );
+
+		img{
+			width: 150px;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+
+section.ping_container{
+	div.innter_container{
+		@include container_sizing( 1000px );
+		margin: 50px auto;
+
+		ul.website_container{
+			li.website_master{
+				div.header{
+					background-color: #f2f2f2;
+					padding: 10px 30px;
+					border-radius: 4px;
+					border: 1px solid rgba(#353535, .1);
+					display: flex;
+
+					div.title{
+						width: 50%;
+
+						h3{
+							color: #353535;
+							line-height: 50px;
+						}
+					}
+					div.performance{
+						width: 50%;
+						display: flex;
+
+						div.performance_group{
+							width: 45%;
+
+							p{
+								font-size: .8rem;
+								text-align: center;
+								margin: 0;
+								color: #353535;
+
+								&.perf_label{ padding-top: 10px; }
+								&.perf_value{ padding-top: 5px; }
+							}
+						}
+						div.uptime_group{
+							width: 45%;
+
+							p{
+								font-size: .8rem;
+								text-align: center;
+								margin: 0;
+								color: #353535;
+
+								&.uptime_label{ padding-top: 10px; }
+								&.uptime_value{ padding-top: 5px; }
+							}
+						}
+						div.status_group{
+							width: 10%;
+							display: flex;
+							align-items: center;
+							justify-content: space-around;
+
+							span.circle{
+								display: block;
+								width: 13px;
+								height: 13px;
+								border-radius: 50%;
+
+								&.green{
+									background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+								}
+								&.orange{
+									background-image: linear-gradient( 135deg, rgba(#FFE985, 1) 10%, rgba(#FA742B, .9) 100%);
+								}
+								&.red{
+									background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+								}
+							}
+						}
+					}
+				}
+				div.body{
+					padding-left: 50px;
+					width: calc(100% - 50px);
+
+					ul{
+						li{
+							div.content{
+								background-color: rgba(#f2f2f2, .2);
+								margin-top: 10px;
+								padding: 0px 30px;
+								border-radius: 4px;
+								border: 1px solid rgba(#353535, .05);
+								display: flex;
+
+								div.title{
+									width: 40%;
+
+									h3{
+										color: #353535;
+										line-height: 50px;
+										font-size: .9rem;
+									}
+								}
+								div.performance{
+									width: 60%;
+									display: flex;
+
+									div.last_update{
+										width: 30%;
+
+										p{
+											font-size: .8rem;
+											text-align: center;
+											margin: 0;
+											color: #353535;
+			
+											&.update_label{ padding-top: 7px; }
+											&.update_value{ padding-top: 5px; }
+										}
+									}
+									div.performance_group{
+										width: 30%;
+
+										p{
+											font-size: .8rem;
+											text-align: center;
+											margin: 0;
+											color: #353535;
+			
+											&.perf_label{ padding-top: 7px; }
+											&.perf_value{ padding-top: 5px; }
+										}
+									}
+									div.uptime_group{
+										width: 30%;
+
+										p{
+											font-size: .8rem;
+											text-align: center;
+											margin: 0;
+											color: #353535;
+	
+											&.uptime_label{ padding-top: 7px; }
+											&.uptime_value{ padding-top: 5px; }
+										}
+									}
+									div.status_group{
+										width: 10%;
+										display: flex;
+										align-items: center;
+										justify-content: space-around;
+
+										span.circle{
+											display: block;
+											width: 13px;
+											height: 13px;
+											border-radius: 50%;
+
+											&.green{
+												background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+											}
+											&.orange{
+												background-image: linear-gradient( 135deg, rgba(#FFE985, 1) 10%, rgba(#FA742B, .9) 100%);
+											}
+											&.red{
+												background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
